@@ -3,7 +3,18 @@ using namespace std;
 
 template <typename T>
 void insertionSort(T d[],int N){
-
+	for(int i = 1 ; i < N; i++){
+		for(int j = 0; j < i; j++){
+			if(d[i] > d[j]){
+				T val = d[i];
+				d[i] = d[j];
+				d[j] = val;
+			}
+		}
+		cout << "Pass " << i << ":";
+		for (int x = 0; x < N ; x++) cout << d[x] << " ";
+		cout << "\n";
+	}
 }
 
 int main(){
